@@ -33,7 +33,7 @@ CREATE TABLE TASK (
 
 
 INSERT INTO USERS ( name, email, password) VALUES
-    ('admin', 'admin@email.com', '$2b$10$p5rSZREdZS/eIjUL3QpKTeBt55otuNewNxb7S3xAoNw3QMMFihNoW');
+    ('admin', 'admin@email.com', '$2b$10$fA6R41kDxt2/nnzcQhMF6Obb97.JmzrRAtqiRVO88SFmw4pmAuN4e');
 
 INSERT INTO CLIENTS (name, email, status, lastlogin) VALUES
     ('John Smith', 'john.smith@example.com', TRUE, '2023-10-14 09:30:00'),

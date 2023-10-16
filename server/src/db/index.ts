@@ -1,19 +1,19 @@
 import { Pool, Client } from 'pg'
 
 export const pool = new Pool({
-  user: "postgres",
-  password: "postgres",
+  user: "web_payments",
+  password: "admin",
   host: process.env.DB_HOST || "localhost",
   port: 5432,
-  database: "postgres"
+  database: "web_payments"
 })
 
 async function connectDataBase() {
   const client = new Client({
     host: process.env.DB_HOST || "localhost",
-    user: 'postgres',
-    password: 'postgres',
-    database: 'postgres',
+    user: 'web_payments',
+    password: 'admin',
+    database: 'web_payments',
     port: 5432,
   });
 

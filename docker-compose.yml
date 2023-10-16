@@ -4,7 +4,7 @@ services:
   client:
     build: ./client
     environment:
-      - VITE_BACKEND_HOST=server
+      - VITE_BACKEND_HOST=localhost
       - VITE_HOST=0.0.0.0
     ports:
       - "3000:3000"
@@ -26,5 +26,5 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: web_payments
+      POSTGRES_PASSWORD: admin
