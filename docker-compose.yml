@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  client:
+    build: ./client
+    environment:
+      - VITE_BACKEND_HOST=server
+      - VITE_HOST=0.0.0.0
+    ports:
+      - "3000:3000"
+
+  server:
+    build: ./server
+    environment:
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+    ports:
+      - "5005:5005"
+
+  postgres:
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
